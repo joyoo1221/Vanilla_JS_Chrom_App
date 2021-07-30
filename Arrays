@@ -1,0 +1,24 @@
+//데이터를 어떻게 하면 가능한 최선의 방법으로 정리할 수 있을까
+//const mon ="mon";
+//const tue ="tue";
+//const wed ="wed";
+//const thr ="thu";
+//const fri ="fri";
+//const sat ="sat";
+//const sun ="sun";
+
+//const daysOfWeek = mon + tue + wed + thr + fri + sat + sun;
+//const daysOfWeek = [mon , tue , wed , thr , fri , sat , sun];
+//-> string 대신에 이제 array(배열)가 되었음!
+//array는 대괄호 안에 각각의 항목을 쉼표로 분리.
+
+const daysOfWeek = ["mon" , "tue" , "wed" , "thr" , "fri" , "sat"];
+
+//<Get Item From Array>
+console.log(daysOfWeek[4]);
+//array안의 데이터에 접근하고 싶다면, array를 갖는 variable의 이름(daysOfWeek)을 적어주고 대괄호 안에 얻고 싶은 항목의 번호를 넣어주면 된다.
+
+//<Add one more day to the array>
+daysOfWeek.push("sun");
+
+console.log(daysOfWeek);
