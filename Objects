@@ -1,0 +1,21 @@
+//비디오 게임을 만들고 있다고 상상
+const player = {
+    name:"joy",
+    points: 10,
+    fat: true,
+};
+console.log(player);
+//console은 object라는 뜻이고, 그 안의 어딘가에 log라는 것이 있다.
+//->{name: "joy", points: 10, fat: true}
+
+//player.fat = false;
+//console.log(player);
+//->{name: "joy", points: 10, fat: false}
+
+//player.lastName = "potato";
+//console.log(player);
+//->{name: "joy", points: 10, fat: true, lastName: "potato"}
+
+player.points = player.points + 15;
+console.log(player.points);
+//->25
