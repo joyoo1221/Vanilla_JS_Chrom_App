@@ -1,0 +1,11 @@
+const player = {
+    name: "joy",
+    sayHello: function(otherPersonsName){
+        console.log("hello " + otherPersonsName + " nice to meet you!");
+    }
+};
+
+console.log(player.name);
+player.sayHello("zeu");
+player.sayHello("lil");
+//function이 object 안에 있을 때만 가능!
