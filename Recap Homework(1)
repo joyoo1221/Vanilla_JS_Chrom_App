@@ -1,0 +1,19 @@
+const carculator = {
+    add: function(a, b) {
+        console.log(a + b);
+    },
+    minus: function(a, b) {
+        console.log(a - b);
+    },
+    divide: function(a, b) {
+        console.log(a / b);
+    },
+    powerOf: function(a, b) {
+        console.log(a ** b);
+    }
+};
+
+carculator.add(1, 4);
+carculator.minus(10, 8);
+carculator.divide(50, 10);
+carculator.powerOf(2, 3);
