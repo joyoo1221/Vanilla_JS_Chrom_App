@@ -1,0 +1,9 @@
+const age = 96;
+function carculateKrAge(ageOfForeigner) {
+    return ageOfForeigner + 2;
+    //무언가를 return하면 계산을 담담하는 function의 코드(ageOfForeingner(age)는 그 function이 return하는 값(return ageOfForeigner + 2;)과 같아진다.)
+}
+
+const krAge = carculateKrAge(age);
+
+console.log(krAge);
