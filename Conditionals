@@ -1,0 +1,7 @@
+//conditional(조건문)은 true인지 false인지 알려주기 때문에 아주 중요!
+const age = prompt("How old are you?");
+
+//parseInt("15")
+//string을 numeber로 바꿔준다
+
+console.log(typeof "15", typeof parseInt("15"));
