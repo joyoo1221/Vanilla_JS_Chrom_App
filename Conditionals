@@ -1,7 +1,18 @@
-//conditional(조건문)은 true인지 false인지 알려주기 때문에 아주 중요!
+//conditonal(조건문)은 true인지 false인지 알려주기 때문에 아주 중요!
 const age = prompt("How old are you?");
+//prompt는 사용자에게 창을 띄울 수 있게 해준다. 2개의 argument를 받음.
+//console.log(age);
+//prompt는 글자에 아무런 스타일(CSS)를 적용시킬 수 없고, 어떤 브라우저는 팝업을 제한하기도 해서 잘 쓰지 않는다.
 
-//parseInt("15")
-//string을 numeber로 바꿔준다
+console.log(age, parseInt(age));
 
-console.log(typeof "15", typeof parseInt("15"));
+
+//const age = parseInt(prompt("How old are you?"));
+//-> const age = parseInt("15");
+//->const age = 15;
+
+
+//const age = parseInt(prompt("How old are you?"));
+//-> const age = parseInt("lalalalla");
+//->const age = NaN;
+//NaN = Not a Number
