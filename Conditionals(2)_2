@@ -1,0 +1,9 @@
+const age = parseInt(prompt("How old are you?"));
+
+if(isNaN(age)) {
+    console.log("Please write a number.");
+} else {
+    console.log("Thank you for writing your age.");
+}
+//isNaN(age)이 true라면 -> "Please write a number."
+//isNaN(age)이 false라면 -> "Thank you for writing your age."
