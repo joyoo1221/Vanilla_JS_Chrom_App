@@ -1,0 +1,17 @@
+//무엇이 NaN인지 판별하기 -> isNaN이라는 function사용
+const age = parseInt(prompt("How old are you?"));
+
+//console.log(isNaN(age));
+//이 function은 하나의 argument를 주면 boolean으로 알려준다.(=boolean을 return한다.)
+//여기서 age는 15처럼 number일 수 있음! 근데 사용자가 무엇을 [prompt("How old are you?")에]입력하느냐에 따라 number가 아닐 수도 있다.
+
+//if(condition){
+    //condition이 참일 때 실행할 코드 적기
+//}else{
+    //condition이 거짓일 때 실행할 코드 적기
+//}
+//condition은 boolean으로 판별 가능해야 한다.(=true거나 false여야 한다. 오직 두 가지 옵션.)
+
+if(isNaN(age)){
+    console.log("Please write a number");
+}
