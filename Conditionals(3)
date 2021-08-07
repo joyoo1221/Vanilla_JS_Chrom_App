@@ -1,0 +1,69 @@
+const age = parseInt(prompt("How old are you?"));
+
+if(isNaN(age)) {
+    console.log("Please write a number.");
+}else if(age < 18) {
+    console.log("You are too young.");
+}else {
+    console.log.apply("You can drink.");
+}
+//더 많은 conditional 연결시키기
+
+
+//18이상 50이하로 나이 제한두기
+const age = parseInt(prompt("How old are you?"));
+
+if(isNaN(age)) {
+    console.log("Please write a number.");
+}else if(age < 18) {
+    console.log("You are too young.");
+}else if(age >= 18 && age <=50) {
+    console.log("You can drink.");
+}else {
+    console.log.apply("You can't drink.");
+}
+//&&=AND. 둘 다 true가 나와야 한다. cf)||=OR. 하나만 true여도 true값으로 인식.
+//마지막 else 전에 하나라도 true가 나오면 마지막 else는 실행되지 않는다.
+
+//하나 더 추가~!
+const age = parseInt(prompt("How old are you?"));
+
+if(isNaN(age)) {
+    console.log("Please write a number.");
+}else if(age < 18) {
+    console.log("You are too young.");
+}else if(age >= 18 && age <=50) {
+    console.log("You can drink.");
+}else if(age >= 51 && age <=80) {
+    console.log("You should exercise.");
+}else if(age > 80) {
+    console.log("You can do whatever you want.");
+}
+//else는 선택적 사항. 꼭 사용해야 하는 건 아니다.
+
+//음수 입력했을 때 양수 입력하라고 말하기(||=OR 사용)
+const age = parseInt(prompt("How old are you?"));
+
+if(isNaN(age || age < 0)) {
+    console.log("Please write a real positive number.");
+}else if(age < 18) {
+    console.log("You are too young.");
+}else if(age >= 18 && age <=50) {
+    console.log("You can drink.");
+}else if(age >= 51 && age <=80) {
+    console.log("You should exercise.");
+}else if(age > 80) {
+    console.log("You can do whatever you want.");
+}
+
+// ||=OR
+//true || true === true
+//false || true === true
+//true || false === true
+//false || false === false
+
+// &&=AND
+//true && true === true
+//false && true === false
+//true && false === false
+//false && false === false
