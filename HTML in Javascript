@@ -1,0 +1,15 @@
+//Document 함수를 이용하여 HTML에서 elements를 가져온 후, JS를 통해 elements를 변경한다.
+const title = document.getElementById("title");
+//먼저, HTML에 id 추가. <h1 id="title">Grab me!</h1>
+//이 element(title)는 getElementById라는 함수로 가져온 것
+
+console.dir(title);
+//console.dir() -> element를 더 자세하게 보여준다.
+
+
+//Document의 함수 중에는 getElementById 라는 함수가 있음.
+//-> 이 함수가 HTML에서 id를 통해 element를 찾아준다.
+
+//element를 찾고 나면, JS로 해당 HTML의 무엇이든 바꿀 수 있다.
+//ex)element의 innerText를 바꾼다던가 title.innerText = "Got you!";
+//   id, className 등을 가져 올 수 있음. cosole.log(title.id);
