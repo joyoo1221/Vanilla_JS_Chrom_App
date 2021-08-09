@@ -1,0 +1,10 @@
+//getElementsByClassName() : 많은 element를 가져올때 쓴다.(array를 반환)
+//getElementsByTagName() : name을 할당할 수 있다.(array를 반환)
+//querySelector : element를 CSS selector 방식으로 검색할 수 있다. ex) h1:first-child
+//                단 하나의 element를 return 해준다.
+//-> hello란 class내부에 있는 h1을 가지고 올 수 있다.(id도 가능)
+//첫 번째 element만 가져온다.
+//조건에 맞는 세 개 다 가져오고 싶으면 querySelectorAll
+//-> 세 개의 h1이 들어있는 array를 가져다 준다.
+//querySelector(#hello);와 getElementById("hello");는 같은 일을 한다.
+//-> 하지만 후자는 하위요소를 가져오지 못하므로 전자를 많이 쓸 것임
