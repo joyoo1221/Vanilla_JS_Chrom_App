@@ -1,0 +1,27 @@
+const title = document.querySelector("div.hello:first-child h1");
+
+console.dir(title);
+//property 앞에 on이 붙어있다면 event listner임!
+//ex) onclick: null -> click으로 사용, onchange: null-> change로 사용(*그냥 앞에 on 빼고 사용하면 된다.)
+
+function handleTitleClick() {
+    title.style.color = "white";
+    console.log("Title was clicked!");
+}
+
+function handleMouseEnter() {
+    title.innerText = "Mouse is here!";
+    //마우스가 title 위에 위치 하면 문장이 바뀐다.
+    //Click me! -> Mouse is here!
+}
+
+function handleMouseLeave() {
+    title.innerText = "Mouse is gone!"
+    //마우스가 title 위에 위치 했다가 벗어나면 문장이 바뀐다.
+    //Mouse is here! -> Mouse is gone!
+}
+
+title.addEventListener("click", handleTitleClick);
+title.addEventListener("mouseenter", handleMouseEnter);
+//mouseenter: 마우스가 title 위에 위치할 때의 event
+title.addEventListener("mouseleave", handleMouseLeave);
