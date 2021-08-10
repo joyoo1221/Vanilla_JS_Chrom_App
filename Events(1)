@@ -1,0 +1,16 @@
+const title = document.querySelector("div.hello:first-child h1");
+
+function handleTitleClick() {
+    title.style.color = "white";
+    //title 색 지정
+    console.log("title was clicked!");
+    //title을 누르면 뜨는 문장
+}
+
+//event(=유저의 행동)을 listen 하기~!
+//1) event 중 하나인 click event를 listen 하기 위해서는 HTML element를 가져와서 addEventListner function을 실행시켜 주면 된다.
+//2) 모든 event를 listen 하고 싶지는 않으니 원하는 event를 명시해준다.(-> "click")
+//3) 유저가 이 element에 해당 event를 했을때 어떤 함수를 실행 할지 정해준다.(-> handleTitleClick)
+title.addEventListener("click", handleTitleClick);
+//JS에 functino만을 넘겨주고, 유저가 title을 click할 경우에 JS가 실행버튼을 대신 눌러준다.
+//handleTitleClick() -> ()은 실행버튼과 같다. JS가 대신 실행버튼을 눌러주는 것이 아닌 직접 실행하는 것.
