@@ -3,6 +3,7 @@ const h1 = document.querySelector("div.hello:first-child h1");
 function handleTitleClick() {
     const currentColor = h1.style.color;
     let newColor;
+    //newColor라는 빈 let 변수 선언 -> if, else를 거치면서 초기화 값을 할당받게 된다
     if(currentColor === "white") {
         newColor = "purple";
     }else {
