@@ -26,7 +26,7 @@ function handleLoginBtnClick() {
     //html 창에가서 보면 콘솔에 hello + value가 표시될 것임
     //근데 아무런 값(value)을 입력 안 했을 때는 hello만 표시 된다.
     //나는 user가 이름을 입력했을 때만 button을 클릭할 수 있도록 하고 싶은데!
-    //-> Form Submission file에 가서 해결 방법 보기 ^<^
+    //-> 해결방법은 Events 파일가서 보기
     console.log("clicked!!!");
 }
 
