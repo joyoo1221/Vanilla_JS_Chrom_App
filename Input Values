@@ -1,0 +1,33 @@
+//HTML에서 form 찾기
+//const loginForm = document.getElementById("login-form");
+    //querySekector()를 사용할 때는 대상이 id인지 명확히 해줘야 한다.
+    //왜? querySelector()로는 classname, tagname 모두 검색 가능하기 때문.
+    //-> const loginForm = document.querySelector("#login-form");
+    //getElementBy'Id'는 그럴 필요 없음. 내가 'id'를 찾고 있다는 걸 이미 알고 있기 때문.
+
+//input이랑 button 끌어오기
+    //document에서 찾는 대신 위에 작성한 loginForm에서 검색
+    //왜 document에서 안 찾아? loginForm은 HTML element이기 때문-> HTML element 안을 바로 검색 가능하다는 뜻! 
+//const loginInput = loginForm.querySelector("input");
+//const loginButton = loginForm.querySelector("button");
+
+//위의 3줄 코드를 더 간단하게 하기
+const loginInput = document.querySelector("#login-form input");
+const loginButton = document.querySelector("#login-form button");
+
+
+//click event 추가하기 -> loginButton에 연결되어야 한다.
+function handleLoginBtnClick() {
+    console.log(loginInput.value);
+    //input의 value를 얻을 수 있다!
+
+    //But 문제가 하나 있음
+    //console.log("hello", loginInput.value);를 한다고 했을 때,
+    //html 창에가서 보면 콘솔에 hello + value가 표시될 것임
+    //근데 아무런 값(value)을 입력 안 했을 때는 hello만 표시 된다.
+    //나는 user가 이름을 입력했을 때만 button을 클릭할 수 있도록 하고 싶은데!
+    //-> Form Submission file에 가서 해결 방법 보기 ^<^
+    console.log("clicked!!!");
+}
+
+loginButton.addEventListener("click",  handleLoginBtnClick);
