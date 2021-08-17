@@ -1,0 +1,29 @@
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+
+const link = document.querySelector("a");
+
+function handleLoginSubmit(event) {
+    event.preventDefault();
+    console.log(loginInput.value);
+
+}
+
+function handleLinkClick(event) {
+    event.preventDefault();
+    //브라우저는 링크를 클릭할 때 해당 사이트로 이동하도록 설정되어 있는데
+    //event.preventDefault();를 통해 이동을 막고 있는 것
+    console.dir(event);
+    //alert("clicked!");
+    //이 alert가 첫 page가 다른 동작을 하지 못하도록 막고 있고
+    //Ok를 눌러서 alert가 없어지면 브라우저는 기본 동작(link)을 실행하게 된다.
+}
+
+loginForm.addEventListener("submit", handleLoginSubmit);
+link.addEventListener("click", handleLinkClick);
+//내가 EventListener를 만들고 거기에 함수(ex)handleLinkClick)를 줬다는 것을 JS가 보게 되면,
+//JS는 누군가 링크를 클릭할 때, 날 위해 함수를 실행시키게 되는 것. 
+//~중요~
+//addEventListener 안에 있는 함수는 직접 실행하지 않는다.
+//(내가 하는게 아니라 브라우저가 해주는 거임)
+//(브라우저는 실행만 시켜줄뿐만아니라 event에 대한 정보도 담아준다.)
