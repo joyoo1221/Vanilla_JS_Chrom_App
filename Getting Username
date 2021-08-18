@@ -1,0 +1,28 @@
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
+
+const HIDDEN_CLASSNAME = "hidden";
+//대문자로 쓰는 건 관습..(일반적으로 string만 포함된 변수는 대문자로 표기하고 string을 저장하고 싶을 때 사용)
+//그리고 위의 코드는 loginForm이나 loginInput처럼 중요한 정보를 담은게 아니라서 대문자로 작성한 것
+
+
+function handleLoginSubmit(event) {
+    event.preventDefault();
+    loginForm.classList.add(HIDDEN_CLASSNAME);
+    const username = loginInput.value;
+    //유저의 이름을 변수로 저장해주고 그 이름은 h1 안에 넣어줄것임!
+    greeting.innerText = `Hello ${username}`;
+    //규칙 1) 만약 변수와 string을 결합하고 싶다거나 또는 변수를 string 안에 집어넣고 싶다면 ${변수명} 이렇게 표현하면 끝!
+    //규칙 2) `` 이 기호로 시작해야 된다. 중요한 규칙임
+
+    //greeting.innerText = `Hello ${username}`;
+    //greeting.innerText = "Hello " + username;
+    //h1 안에다 greeting에 있는 텍스트를 추가
+    //위 두 줄은 똑같음! 둘 다 string이랑 변수를 하나로 합쳐주고 있다.
+
+    greeting.classList.remove(HIDDEN_CLASSNAME);
+    //hidden class 제거하기
+}
+
+loginForm.addEventListener("submit", handleLoginSubmit);
