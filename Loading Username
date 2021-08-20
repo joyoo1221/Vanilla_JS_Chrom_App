@@ -1,0 +1,34 @@
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
+
+const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username";
+//hidden이나 username처럼 string을 반복해서 사용하는 경우에
+//그리고 그것들이 '무조건' 같아야 할 때 대문자 변수로 고정시켜 줄 수 있다.
+//-> 우린 hidden이나 username 같은 string을 한 번만 작성하고 싶기 때문에 이런 방법을 쓰는 것
+//(만약 string을 하나하나 작성하다가 오타가 난다면 JS는 그것을 지적하지 않기 때문)
+//(하지만 변수명이 오타가 난다면? JS가 알려줄 것임)
+
+function handleLoginSubmit(event) {
+    event.preventDefault();
+    loginForm.classList.add(HIDDEN_CLASSNAME);
+    const username = loginInput.value;
+    localStorage.setItem(USERNAME_KEY, username);
+    paintGreetings(username);
+}
+
+function paintGreetings(username) {
+    greeting.innerText = `Hello ${username}`;
+    greeting.classList.remove(HIDDEN_CLASSNAME);
+}//두 줄의 코드가 계속 반복되니까 paintGreetings라는 함수를 만들어 줬음
+
+const savedUsername = localStorage.getItem(USERNAME_KEY);
+
+if(savedUsername === null) {
+    loginForm.classList.remove(HIDDEN_CLASSNAME);
+    loginForm.addEventListener("submit", handleLoginSubmit);
+}else {
+    paintGreetings(savedUsername);
+}
+//savedUsename의 값이 null이라면 form을 보여주고 아니라면 greetings를 보여주도록 할 것
