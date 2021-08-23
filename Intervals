@@ -1,0 +1,12 @@
+const clock = document.querySelector("h2#clock");
+
+//interval -> '매번' 일어나야 하는 무언가
+//ex) 매 2초마다 어떤 일이 일어나게 하고 싶을 때 쓰는!
+
+function sayHello() {
+    console.log("hello");
+}
+
+setInterval(sayHello, 5000);
+//첫 번째 argument = 내가 실행하고자 하는 function
+//두 번째 argument = 호출되는 function 간격을 몇 ms(milliseconds)로 할 지 정하기
