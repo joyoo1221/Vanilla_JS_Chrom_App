@@ -1,0 +1,54 @@
+const quotes = [
+    {
+        quote: "Today's special moments are tomorrow's memories.",
+        author: "Aladdin",
+    },
+    {
+        quote:"Everything that I understand, I understand only because I love.",
+        author:"Lev Tolstory",
+    },
+    {
+        quote:"I tell myself that I am not afraid.",
+        author:"Winne The Pooh",
+    },
+    {
+        quote:"There is nothing either good or bad, but thinking makes it so.",
+        author:"William Shakespeare",
+    },
+    {
+        quote:"Everything has its beauty but not everyone sees it.",
+        author:"Confucius",
+    },
+    {
+        quote:"We know what we are, but not what we may be.",
+        author:"William Shakespeare",
+    },
+    {
+        quote:"It's a leap of faith. That's all it is.",
+        author:"Peter B. Parker",
+    },
+    {
+        quote:"It's the time you spent on your rose that makes your rose so important.",
+        author:"The Little Prince",
+    },
+    {
+        quote:"Yesterday is history. Tomorrow is a mystery, but today is a gift! That is why it is called the present.",
+        author:"Kung Fu Panda",
+    },
+    {
+        quote:"If I like a moment, I mean me, personally, I don't like to have the distraction of the camera. I just want to stay in it.",
+        author:"The Secret Life Of Walter Mitty",
+    },
+];
+
+const quote = document.querySelector("#quote span:first-child");
+const author = document.querySelector("#quote span:last-child");
+
+const todaysQuotes = quotes[Math.floor(Math.random() * quotes.length)];
+//                 = quqotes Array 내부에서 무엇인지 탐색[Math.숫자 내림(0에서 1사이의 랜덤한 숫자 * Array의 길이)]
+//round 반올림, ceil 올림, floor 내림
+//quotes의 Array의 길이(이 경우는 10)를 알면 명언의 수를 기억하지 않아도 된다.
+//-> length 활용 -> quotes.length
+
+quote.innerText = todaysQuotes.quote;
+author.innerText = todaysQuotes.author;
