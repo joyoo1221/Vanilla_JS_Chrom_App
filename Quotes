@@ -47,8 +47,8 @@ const author = document.querySelector("#quote span:last-child");
 const todaysQuotes = quotes[Math.floor(Math.random() * quotes.length)];
 //                 = quqotes Array 내부에서 무엇인지 탐색[Math.숫자 내림(0에서 1사이의 랜덤한 숫자 * Array의 길이)]
 //round 반올림, ceil 올림, floor 내림
-//quotes의 Array의 길이(이 경우는 10)를 알면 명언의 수를 기억하지 않아도 된다.
-//-> length 활용 -> quotes.length
+//quotes의 Array의 길이를 알면 명언의 수를 기억하지 않아도 된다.
+//-> length 활용 -> quotes.length(=10. 명언이 10개라 길이는 10으로 된다.)
 
 quote.innerText = todaysQuotes.quote;
 author.innerText = todaysQuotes.author;
