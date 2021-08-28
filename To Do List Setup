@@ -1,0 +1,22 @@
+const toDoForm = document.getElementById("todo-form");
+const toDoInput = toDoForm.querySelector("input");
+//input을 document가 아닌 toDoForm 안에서 찾을 수 있음
+//document에서 찾는 건 이거 ↓
+//              = document.querySelector("#todo-form input");
+//-> id가 todo-form인 form 안에서 input을 찾는 것
+const toDoList = document.getElementById("todo-list");
+
+function handleToDoSubmit(event) {
+    event.preventDefault();
+    const newTodo = toDoInput.value;
+    //밑에 input value 비우기 전에 그 값을 저장해보기
+    //지금 11라인에서 내가 하는 건
+    //input의 현재 value를 새로운 변수에 복사하는 것임
+    toDoInput.value = "";
+    //엔터 누르면 칸 비워지게
+    //*toDoInput.value를 비웠다고 해서 newToDo가 비워지는 것을 의미하진 않는다.
+    //why?-> 내가 하는 건 input의 value를 새로운 변수에 복사하는 것이기 때문!
+    //그래서 inpit의 value를 가지고 무엇을 하든 newToDo에는 아무런 영향이 없다.
+}
+
+toDoForm.addEventListener("submit", handleToDoSubmit);
