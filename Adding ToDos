@@ -1,0 +1,30 @@
+const toDoForm = document.getElementById("todo-form");
+const toDoInput = toDoForm.querySelector("input");
+const toDoList = document.getElementById("todo-list");
+
+function paintToDo(newTodo) {
+    const li = document.createElement("li");
+    //변수의 이름을 꼭 li로 하지 않아도 됨
+    const span =document.createElement("span");
+    li.appendChild(span);
+    //span을 li 내부에 넣음
+    span.innerText = newTodo;
+    //innerText를 span 내부에 넣기
+    //span 안에 넣은 새로운 텍스트는 사용자가 form에서 우리에게 준 newTodo값임
+    //(=span의 텍스트는 handleToDoSubmit에서 온 newTodo 텍스트가 되는 거임)
+    toDoList.appendChild(li);
+}//이 function은 toDo를 그리는 역할을 담당할 것인데 뭘 그려야 할 지 모르니까
+//function에 인자 주기 -> (newTodo)
+
+function handleToDoSubmit(event) {
+    event.preventDefault();
+    const newTodo = toDoInput.value;
+    //이 변수 newToDo는 input의 value를
+    toDoInput.value = "";
+    //비우기 전의 값을 나타내는 string이다.
+    paintToDo(newTodo)
+    //그런 다음 그 입력값을 paintToDo에 넣어서 호출하는 것
+}//handleToDoSubmit function이 paintToDo를 사용하게 되는 것
+//-> paintToDo()를 호출하고 newTodo를 보내는 것!
+
+toDoForm.addEventListener("submit", handleToDoSubmit);
