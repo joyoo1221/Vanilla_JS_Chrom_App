@@ -1,0 +1,49 @@
+const toDoForm = document.getElementById("todo-form");
+const toDoInput = toDoForm.querySelector("input");
+const toDoList = document.getElementById("todo-list");
+
+function deleteToDo(event) {
+    const li = event.target.parentElement;
+    //= 내가 삭제하고 싶은 li
+    //target은 클릭된 HTML element이다.
+    //그리고 모든 HTML element에는 하나 이상이 property가 있다.
+    //parentElement는 클릭된 element의 부모이다.
+    li.remove();
+}//ToDo를 삭제할 function이다.
+//1)❌button을 클릭할 때, event를 얻게 될 거임
+//2)event는 target을 주고
+//3)target은 button임. 그 button은 부모를 갖고 있음
+//4)나는 그 button의 부모에 접근할 수 있음(parentElement)
+//5)button의 부모는 li가 되는 거
+//6)그리고 그 li 제거
+
+function paintToDo(newTodo) {
+    const li = document.createElement("li");
+    //li 만듦
+    const span =document.createElement("span");
+    //span 만듦
+    span.innerText = newTodo;
+    //span의 텍스트를 변경
+    const button = document.createElement("button");
+    //button 만듦
+    button.innerText = "❌";
+    //button의 텍스트를 변경
+    button.addEventListener("click", deleteToDo);
+    //button에 click eventListener를 추가
+    li.appendChild(span);
+    //span을 li에 추가
+    li.appendChild(button);
+    //button을 li에 추가
+    toDoList.appendChild(li);
+    //li를 toDoList에 추가
+    //appendChild는 맨 마지막에 놓여져야 한다!!!!!
+}
+
+function handleToDoSubmit(event) {
+    event.preventDefault();
+    const newTodo = toDoInput.value;
+    toDoInput.value = "";
+    paintToDo(newTodo)
+}
+
+toDoForm.addEventListener("submit", handleToDoSubmit);
