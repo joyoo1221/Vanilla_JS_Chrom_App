@@ -1,0 +1,14 @@
+function onGeoOk(position) {
+    const lat = position.coords.latitude;  //위도
+    const lon = position.coords.longitude; //경도
+}
+
+function onGeoError() {
+    alert("Can't find you. No weather for you.");
+}
+
+navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
+//이걸 부르면 브라우저에서 위치 좌표를 준다. WIFI, 위치, GPS 등등
+//getCurrentPosition은 2개의 argument를 필요로 한다.
+//하나는 모든 게 잘 됐을 때 실행 될 함수(= onGeoOk)
+//나머지 하나는 에러가 발생했을 때 실행 될 함수임.(= onGeoError)
